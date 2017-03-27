@@ -16,4 +16,16 @@ RSpec.describe Workshop, type: :model do
     end
   end
 
+  it "is valid with a title" do
+    workshop = Workshop.new(title:"Workshop Title")
+    workshop.valid?
+    expect(workshop.errors).to_not have_key(:title)
+  end
+
+  it "is valid with a description" do
+    workshop = Workshop.new(description:"A short description")
+    workshop.valid?
+    expect(workshop.errors).to_not have_key(:description)
+  end
+
 end
