@@ -57,3 +57,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# enables serving assets in production and setting your logger to standard out, both of which are required to run a Rails application on a twelve-factor provider.
+gem 'rails_12factor', group: :production
