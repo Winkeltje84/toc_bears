@@ -32,4 +32,14 @@ ActiveRecord::Schema.define(version: 20170327125845) do
     t.datetime "updated_at",   null: false
   end
 
+  create_table "workshops", force: :cascade do |t|
+    t.string   "title"
+    t.string   "description"
+    t.string   "image"
+    t.string   "demo_link"
+    t.string   "github_link"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
 end
