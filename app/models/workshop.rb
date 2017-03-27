@@ -1,5 +1,5 @@
 class Workshop < ApplicationRecord
-  validates :title, presence:true
-  validates :description, presence:true
+  validates :title, :description, presence: true
 
+  mount_uploader :image, ImageUploader
 end
