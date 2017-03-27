@@ -10,8 +10,8 @@ RSpec.describe User, type: :model do
       expect(guest_user.admin).to eq(false)
     end
 
-    it "if 'Admin' status is set to true by another Admin,
-    the 'Admin' status is true" do
+    it "creates an admin user when admin: true is included
+    in the create function" do
       expect(admin_user.admin).to eq(true)
     end
 
