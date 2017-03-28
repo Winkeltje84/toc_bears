@@ -2,16 +2,13 @@
 @import "bootstrap";
 
 // *******  Add fonts
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,500,900);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,700);
-@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700);
-
+@import url(https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&subset=latin-ext);
 html {
   font-size: 10px;
 }
 body {
-  font-family: Roboto,Helvetica,Arial,sans-serif;
-  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
   color: #333;
   background-color: #faf5ef;
 }
