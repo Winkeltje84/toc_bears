@@ -12,14 +12,14 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
 
-
-    resources :events do  sponsors
+    resourses :sponsors
+    resources :events do
                           companies
                           workshops do users
                           end
                           end
     "event/book", to: "event#book"
-    "event/sponsor" to: "event#sponsor"
+    "event/sponsor" to: "sponsor#sponsor"
     "event/workshop/attend" to: "workshop/attend"
 
 
