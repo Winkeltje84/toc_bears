@@ -1,0 +1,40 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// *******  Add fonts
+@import url(https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&subset=latin-ext);
+html {
+  font-size: 10px;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #333;
+  background-color: #faf5ef;
+
+}
+// ******* Static navbar css
+body {
+  min-height: 2000px;
+}
+.navbar-static-top {
+  margin-bottom: 19px;
+}
+
+
+// ******* Sticky Footer css
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
