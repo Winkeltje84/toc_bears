@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get 'pages/home'
+  get 'public' => 'pages#public'
 
   devise_for :users
 
