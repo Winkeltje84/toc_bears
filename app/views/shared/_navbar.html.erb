@@ -11,9 +11,9 @@
                     </a>
                 </div>
                 <ul class="nav nav-pills navbar-right">
-                  <li class="active"><a href="#">Join Taste of Code</a></li>
-                  <li class=""><a href="#">In Company</a></li>
-                  <li class=""><a href="#">Host Taste of code</a></li>
+                  <li class="<%= current_page?(public_path) ? "active" : " "%>"><%= link_to "Taste of Code", public_path %></li>
+                  <li class="<%= current_page?(public_path) ? "active" : " "%>"><%= link_to "In Company", incompany_path %></li>
+                  <li class="<%= current_page?(public_path) ? "active" : " "%>"><%= link_to "Host Tast of Code", host_path %></li>
 
                 </ul>
             </div>
