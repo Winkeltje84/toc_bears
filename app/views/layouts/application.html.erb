@@ -9,8 +9,12 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-default navbar-static-top">
     <%#= render 'shared/navbar' %>
+    </nav>
     <%= yield %>
-    <%#= render 'shared/footer' %>
+    <footer class="footer">
+      <%#= render 'shared/footer' %>
+    </footer>
   </body>
 </html>
