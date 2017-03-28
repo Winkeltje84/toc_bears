@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="container-fluid">
+    <div class="col-xs-6 col-sm-4">
+      <div class="logo-container">
+        <h2>Codaisseur</h2>
+      </div>
+      <p class="address">
+        Codaisseur BV<br>
+        <%= mail_to "me@domain.com" %><br>
+        <%= link_to "https://goo.gl/maps/ePdA5GQUx8L2" do %>
+        Singel 542<br>
+        1017 AZ Amsterdam<br>
+        The Netherlands<br>
+        <% end %>
+        <%= link_to "+31202615197", "tel:+31202615197" %><br>
+      </p>
+    </div>
+    <div class="col-xs-6 col-sm-4">
+    </div>
+    <div class="col-xs-6 col-sm-4">
+      <h4>Follow us</h4>
+      <div class="social-icons">
+        <div class="icon-container">
+          <%= link_to "https://twitter.com/devbootcamps", target: "blank" do %>
+            <i class="fa fa-twitter"></i>
+          <% end %>
+        </div>
+        <div class="icon-container">
+          <%= link_to "https://www.facebook.com/developmentbootcamp", target: "blank" do %>
+            <i class="fa fa-facebook"></i>
+          <% end %>
+        </div>
+        <div class="icon-container">
+          <%= link_to "https://www.linkedin.com/company/development-bootcamp", target: "blank" do %>
+            <i class="fa fa-linkedin"></i>
+          <% end %>
+        </div>
+        <div class="icon-container">
+          <%= link_to "https://github.com/devbootcamps", target: "blank" do %>
+            <i class="fa fa-github"></i>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
