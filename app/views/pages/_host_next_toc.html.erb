@@ -7,7 +7,7 @@
     <input type="text" id="input_first_name" class="form-control" placeholder="Last Name" required="" autofocus="">
     <input type="text" id="input_first_name" class="form-control" placeholder="Company Name" required="" autofocus="">
     <input type="text" id="input_email" class="form-control" placeholder="Email" required="" autofocus="">
-
+  </form>
       <div class="form-group">
         <div class='input-group date' id='datetimepicker9'>
           <input type='text' class="form-control" placeholder="Date (ex. 03/29/2017 3:00 PM)"/>
@@ -18,67 +18,29 @@
         </div>
       </div>
 
-        <script type="text/javascript">
-            $(function () {
-                $('#datetimepicker9').datetimepicker({
-                    viewMode: 'years'
-                });
-            });
-        </script>
-      </div>
-
       <div class="container">
-        <div class="col-xs-3 col-xs-offset-2">
-          <p>Number of People </p>
-          <div class="input-group number-spinner">
-            <span class="input-group-btn data-dwn">
-              <button class="btn btn-default btn-info" data-dir="dwn">
-                <span class="glyphicon glyphicon-minus"></span>
-              </button>
-            </span>
-            <input type="text" class="form-control text-center" value="1" min="1" max="100">
-            <span class="input-group-btn data-up">
-              <button class="btn btn-default btn-info" data-dir="up">
-                <span class="glyphicon glyphicon-plus"></span>
-              </button>
-            </span>
+        <div class="row">
+          <div class="col-sm-4">
+            <p>Number of People </p>
+            <div class="input-group number-spinner">
+              <span class="input-group-btn data-dwn">
+                <button class="btn btn-default btn-info" data-dir="dwn">
+                  <span class="glyphicon glyphicon-minus"></span>
+                </button>
+              </span>
+              <input type="text" class="form-control text-center" value="1" min="1" max="100">
+              <span class="input-group-btn data-up">
+                <button class="btn btn-default btn-info" data-dir="up">
+                  <span class="glyphicon glyphicon-plus"></span>
+                </button>
+              </span>
+            </div>
           </div>
         </div
       </div>
 
-        <script type="text/javascript">
-          $(function() {
-            var action;
-            $(".number-spinner button").mousedown(function () {
-                btn = $(this);
-                input = btn.closest('.number-spinner').find('input');
-                btn.closest('.number-spinner').find('button').prop("disabled", false);
 
-                if (btn.attr('data-dir') == 'up') {
-                      action = setInterval(function(){
-                          if ( input.attr('max') == undefined || parseInt(input.val()) < parseInt(input.attr('max')) ) {
-                              input.val(parseInt(input.val())+1);
-                          }else{
-                              btn.prop("disabled", true);
-                              clearInterval(action);
-                          }
-                      }, 50);
-                } else {
-                      action = setInterval(function(){
-                          if ( input.attr('min') == undefined || parseInt(input.val()) > parseInt(input.attr('min')) ) {
-                              input.val(parseInt(input.val())-1);
-                          }else{
-                              btn.prop("disabled", true);
-                              clearInterval(action);
-                          }
-                      }, 50);
-                }
-              }).mouseup(function(){
-                  clearInterval(action);
-              });
-            });
-        </script>
-    <div class="container">
+    <div class="row">
       <div class="form-group">
         <textarea class="form-control" id="comment" placeholder="Comment" rows="5"> Comments
         </textarea>
@@ -89,5 +51,5 @@
       <button type ="submit" class="btn btn-primary">Submit</button>
     </div>
 
-  </form>
+
 </div>
