@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
 
-  get 'pages/home'
-  get 'public' => 'pages#public'
+  root 'pages#homepage'
+  get '/', to: 'pages#homepage'
+  get '/attend', to: 'pages#attend'
+  get '/incompany', to: 'pages#incompany'
+  get '/sponsor', to: 'pages#sponsor'
+
 
   devise_for :users
 

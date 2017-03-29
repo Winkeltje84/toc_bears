@@ -1,7 +1,8 @@
 class PagesController < ApplicationController
-  def home
-  end
 
-  def public
-  end
+  def homepage;end
+  def attend;end
+  def incompany;end
+  def sponsor;end
+
 end
