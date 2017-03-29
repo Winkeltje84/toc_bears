@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "Test the routes", type: :routing do
-  describe "Test routes that should exist" do
+  describe "that should exist" do
     context "Related to pages controller" do
       it "root to go to the pages#homepage" do
         expect(get("/")).to route_to("pages#homepage")
@@ -38,21 +38,14 @@ RSpec.describe "Test the routes", type: :routing do
         expect(post("/admin/password")).to route_to("devise/passwords#create")
       end
     end
-    context "Related to Workshops" do
-      it "show workshop(s)"
-      it "create and edit a workshop"
-      it "delete a workshop"
-    end
-    context "Related to the Events" do
-      it "show event(s)"
-      it "create and edit a event"
-      it "delete a workshop"
-    end
   end
   describe "Test routes that should NOT exist" do
     context "related to devise" do
       it "does not have route to sign up" do
         expect(get("/admin/sign_up")).not_to route_to("devise/registrations#new")
+      end
+      it "does not have route to post a new user to the databse" do
+        expect(post("/admin")).not_to route_to("devise/registrations#create")
       end
     end
   end
