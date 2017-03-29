@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-
   root 'pages#homepage'
   get '/', to: 'pages#homepage'
   get '/attend', to: 'pages#attend'

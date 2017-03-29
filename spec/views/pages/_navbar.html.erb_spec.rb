@@ -1,3 +1,4 @@
+
 require 'rails_helper'
 
 RSpec.describe "shared/_navbar.html.erb", type: :view do
