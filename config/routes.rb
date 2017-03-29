@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  root 'pages#home'
-  get 'pages/home'
+  root 'pages#homepage'
+  get '/', to: 'pages#homepage'
+  get '/attend', to: 'pages#attend'
+  get '/incompany', to: 'pages#incompany'
+  get '/sponsor', to: 'pages#sponsor'
 
   devise_for :users
 
