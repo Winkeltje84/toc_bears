@@ -6,7 +6,8 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
-  def show; end
+  def show
+  end
 
   def new
     @event = Event.new
@@ -22,7 +23,8 @@ class EventsController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+  end
 
   def update
     @event = Event.update(event_params)
