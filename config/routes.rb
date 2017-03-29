@@ -5,7 +5,11 @@ Rails.application.routes.draw do
   get '/incompany', to: 'pages#incompany'
   get '/sponsor', to: 'pages#sponsor'
 
-  devise_for :users
+  devise_for :users, path: 'admin', skip: [:registrations], path_names: { sign_in: 'login', sign_out: 'logout'}
+
+  scope '/admin' do
+    resources :workshops, :events
+  end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
