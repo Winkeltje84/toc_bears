@@ -1,5 +1,5 @@
 class Admin::SponsorsController < ApplicationController
-  #before_action :set_sponsor
+  before_action :set_sponsor, only: [:show, :edit, :update, :destroy]
   #before_action :authenticate_user!
 
   def new

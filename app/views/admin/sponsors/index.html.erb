@@ -1,6 +1,11 @@
 <div class="container">
-  <% @sponsors.each do |sponsor| %>
-    <p><%= sponsor.company_name %></p>
-    <%= image_tag sponsor.logo %>
-  <% end %>
+  <tbody>
+    <% @sponsors.each do |sponsor| %>
+      <tr>
+        <span><%= sponsor.company_name %></span>
+        <%= image_tag sponsor.logo,  height: 100, alt: "Sponsor logo" %>
+        <hr>
+      </tr>
+    <% end %>
+  </tbody>
 </div>
