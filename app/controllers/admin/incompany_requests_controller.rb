@@ -24,6 +24,7 @@ class Admin::IncompanyRequestsController < ApplicationController
   end
 
   def edit
+      @incompanyrequest = IncompanyRequest.find(params[:id])
   end
 
   def update

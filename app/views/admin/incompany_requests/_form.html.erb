@@ -1,0 +1,21 @@
+<%= form_for @incompanyrequest do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+
+  <%= f.label :company_name %>
+  <%= f.text_field :company_name %>
+
+  <%= f.label :date %>
+  <%= f.text_field :date %>
+
+  <%= f.label :spaces_available %>
+  <%= f.number_field :spaces_available %>
+
+  <%= f.label :workshop_id %>
+  <%= f.text_field :workshop_id %>
+
+  <%= f.submit "Save", class: "btn btn-primary" %>
+<% end %>
