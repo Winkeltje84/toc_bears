@@ -1,13 +1,13 @@
 class Admin::SponsorsController < ApplicationController
-  before_action :set_sponsor
-  before_action :authenticate_user!
+  #before_action :set_sponsor
+  #before_action :authenticate_user!
 
   def new
     @sponsor = Sponsor.new
   end
 
   def index
-    @sponsors = Sponsors.all
+    @sponsors = Sponsor.all
   end
 
   def create
