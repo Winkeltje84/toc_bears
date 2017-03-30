@@ -1,4 +1,4 @@
-class WorkshopsController < ApplicationController
+class Admin::WorkshopsController < ApplicationController
   def index
     @workshops = Workshop.all
   end
@@ -27,7 +27,7 @@ class WorkshopsController < ApplicationController
 
   def update
     @workshop = Workshop.find(params[:id])
-    
+
     if @workshop.update(workshop_params)
       redirect_to workshop_path(@workshop), notice:"Workshop successfully updated"
     else
