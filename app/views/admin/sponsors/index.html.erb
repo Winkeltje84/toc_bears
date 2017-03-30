@@ -1,11 +1,24 @@
-<div class="container">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Company name</th>
+      <th>Company logo</th>
+      <th></th>
+    </tr>
+  </thead>
   <tbody>
-    <% @sponsors.each do |sponsor| %>
-      <tr>
-        <span><%= sponsor.company_name %></span>
-        <%= image_tag sponsor.logo,  height: 100, alt: "Sponsor logo" %>
-        <hr>
-      </tr>
+    <% if @sponsors.count > 0 %>
+      <% @sponsors.each do |sponsor| %>
+        <tr class="clickable-row" data-href='<%= sponsor_url(sponsor.id) %>'>
+          <td><%= sponsor.id %></td>
+          <td><%= link_to sponsor.company_name, sponsor %></td>
+          <td><%= image_tag sponsor.logo,  height: 100, alt: "Sponsor logo" %></td>
+          <td>buttons</td>
+        </tr>
+      <% end %>
+    <% else %>
+      <tr><td colspan="6" style="text-align:center;">No sponsors exist yet</td><tr>
     <% end %>
   </tbody>
-</div>
+</table>
