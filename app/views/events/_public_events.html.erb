@@ -1,0 +1,19 @@
+<h3>Public Events</h3>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Spaces Available</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @events.public.each do |event| %>
+      <tr>
+        <th>event.name</th>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
