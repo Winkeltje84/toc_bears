@@ -1,4 +1,5 @@
 class SponsorsController < ApplicationController
+  before_action :set_sponsor
   before_action :authenticate_user!
 
   def new
@@ -33,6 +34,9 @@ class SponsorsController < ApplicationController
   end
 
   def destroy
+    @sponsor = Sponsor.find(params[:id])
+    @sponsor.destroy
+    redirect_to sponsor_path
   end
 end
 
