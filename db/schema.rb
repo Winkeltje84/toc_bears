@@ -11,8 +11,8 @@
 # It's strongly recommended that you check this file into your version control system.
 
 
-ActiveRecord::Schema.define(version: 20170330101723) do
-IncompanyRequest Model and Validations
+ActiveRecord::Schema.define(version: 20170330103736) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,8 @@ IncompanyRequest Model and Validations
     t.text     "comments"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "workshop_id"
+    t.index ["workshop_id"], name: "index_incompany_requests_on_workshop_id", using: :btree
   end
 
   create_table "sponsors", force: :cascade do |t|
@@ -75,4 +77,5 @@ IncompanyRequest Model and Validations
     t.datetime "updated_at",  null: false
   end
 
+  add_foreign_key "incompany_requests", "workshops"
 end
