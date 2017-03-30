@@ -14,7 +14,7 @@
           <td><%= sponsor.id %></td>
           <td><%= link_to sponsor.company_name, admin_sponsor_path(sponsor.id) %></td>
           <td><%= image_tag sponsor.logo,  height: 100, alt: "Sponsor logo" %></td>
-          <td>buttons</td>
+          <td><%= link_to "[Edit]", edit_admin_sponsor_path(sponsor.id) %></td>
         </tr>
       <% end %>
     <% else %>
