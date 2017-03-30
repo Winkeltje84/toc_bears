@@ -36,7 +36,7 @@ class Admin::SponsorsController < ApplicationController
   def destroy
     @sponsor = Sponsor.find(params[:id])
     @sponsor.destroy
-    redirect_to sponsors_path, notice: "Sponsor deleted"
+    redirect_to admin_sponsors_path, notice: "Sponsor deleted"
   end
 end
 
