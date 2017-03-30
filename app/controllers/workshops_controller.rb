@@ -26,6 +26,8 @@ class WorkshopsController < ApplicationController
   end
 
   def update
+    @workshop = Workshop.find(params[:id])
+    
     if @workshop.update(workshop_params)
       redirect_to workshop_path(@workshop), notice:"Workshop successfully updated"
     else
