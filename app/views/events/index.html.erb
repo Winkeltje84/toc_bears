@@ -1,6 +1,7 @@
 <div class="container">
   <h2>Events</h2>
-  <%= render 'public_events' %>
+  <h3>Public Events</h3>
+  <%= render partial: "events_table", locals: { events: @public_events } %>
   <hr>
-  <%= render 'incompany_events' %>
+  <%= render partial: "events_table", locals: { events: @incompany_events } %>
 </div>

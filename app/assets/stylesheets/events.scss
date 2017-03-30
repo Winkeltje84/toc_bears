@@ -4,3 +4,7 @@ tr.clickable-row {
 tr.clickable-row:hover {
   background-color: aliceblue !important;
 }
+tr.clickable-row a {
+  text-decoration: none;
+  color: #333333;
+}

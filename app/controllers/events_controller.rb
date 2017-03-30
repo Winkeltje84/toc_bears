@@ -3,9 +3,8 @@ class EventsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @events = Event.all
-    @public_events = @events.where(public: true)
-    @incompany_events = @events.where(public: false)
+    @public_events = Event.open_for_public
+    @incompany_events = Event.in_company
   end
 
   def show
