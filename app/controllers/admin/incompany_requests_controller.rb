@@ -1,11 +1,13 @@
 class Admin::IncompanyRequestsController < ApplicationController
   before_action :set_incompanyrequest, only: [:edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:show]
 
   def index
     @incompanyrequests = IncompanyRequest.all
   end
 
+  def show
+  end
 
   def new
     @incompanyrequest = IncompanyRequest.new
@@ -15,7 +17,7 @@ class Admin::IncompanyRequestsController < ApplicationController
     @incompanyrequest = IncompanyRequest.new(incompanyrequest_params)
 
     if @incompanyrequest.save
-      redirect_to @incompanyrequest
+      redirect_to @incompanyrequest, notice: 'Event request was succesfully created.'
     else
       render 'new'
     end
