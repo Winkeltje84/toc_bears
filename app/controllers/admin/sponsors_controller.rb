@@ -1,4 +1,4 @@
-class SponsorsController < ApplicationController
+class Admin::SponsorsController < ApplicationController
   before_action :set_sponsor
   before_action :authenticate_user!
 
