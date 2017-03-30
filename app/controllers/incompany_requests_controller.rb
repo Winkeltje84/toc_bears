@@ -1,5 +1,6 @@
 class IncompanyRequestsController < ApplicationController
-  before_action: set_incompanyrequest
+  before_action :set_incompanyrequest
+  before_action :authenticate_user!
 
   def index
     @incompanyrequests = IncompanyRequest.all
@@ -21,7 +22,6 @@ class IncompanyRequestsController < ApplicationController
   end
 
   def edit
-    @incompanyrequest = IncompanyRequest.find(params[:id])
   end
 
   def update
