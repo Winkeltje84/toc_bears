@@ -24,14 +24,31 @@ class Admin::SponsorsController < ApplicationController
   end
 
   def update
-    @sponsor = Sponsor.update(sponsor_params)
+    #@sponsor = Sponsor.find(params[:id])
 
-    if @sponsor.save
+    #sponsor_params = params.require(:sponsor).permit(:company_name, :logo)
+    if @sponsor.update(sponsor_params)
       redirect_to @sponsor, notice: "Sponsor updated"
     else
-      render :edit
+      render 'edit'
     end
+
+    #@sponsor = Sponsor.update(sponsor_params)
+
+    #if @sponsor.save
+    #  redirect_to @sponsor, notice: "Sponsor updated"
+    #else
+    #  render :edit
+    #end
   end
+
+  #def update
+  #  if @room.update(room_params)
+  #    redirect_to @room, notice: "Room successfully updated"
+  #  else
+  #    render :edit
+  #  end
+  #end
 
   def destroy
     @sponsor = Sponsor.find(params[:id])

@@ -8,6 +8,7 @@
   <%= f.label :logo %>
   <%= f.text_field :logo %>
 
-  <%= f.submit (@sponsor.new_record? ? "Create" : "Update") %>
-
+  <div class="actions">
+  <%= f.submit "Update" %>
+</div>
 <% end %>
