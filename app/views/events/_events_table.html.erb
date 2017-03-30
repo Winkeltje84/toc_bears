@@ -18,7 +18,10 @@
           <td><%= event.location %></td>
           <td><%= event.spaces_available %></td>
           <td><%= event.date %></td>
-          <td>buttons</td>
+          <td>
+            <%= link_to edit_event_path(event.id), data: {confirm: "Are you sure?"} do %><i class="fa fa-pencil" aria-hidden="true"></i><% end %>
+            <%= link_to event_path(event.id), data: {confirm: "Are you sure?"} do %><i class="fa fa-trash" aria-hidden="true"></i><% end %>
+          </td>
         </tr>
       <% end %>
     <% else %>

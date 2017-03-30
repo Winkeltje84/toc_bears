@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: [:show, :edit, :update]
+  before_action :set_event, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
   layout 'admin'
 
@@ -36,6 +36,11 @@ class EventsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @event.delete
+    redirect_to events_path, notice: "Event has been destroyed"
   end
 
   private
