@@ -1,0 +1,13 @@
+<h1>Incompany Requests</h1>
+
+<tbody>
+  <tr>
+  <% @incompanyrequests.each do |incompanyrequest| %>
+    <p><%= incompanyrequest.first_name %><%= incompanyrequest.last_name %></p>
+    <p><%= incompanyrequest.company_name %></p>
+    <p><%= incompanyrequest.date %> </p>
+    <p><%= incompanyrequest.spaces_available %></p>
+    <p><%= incompanyrequest.workshop_id %></p>
+  <% end %>
+  </tr>
+</tbody>

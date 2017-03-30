@@ -1,5 +1,5 @@
-class IncompanyRequestsController < ApplicationController
-  before_action :set_incompanyrequest
+class Admin::IncompanyRequestsController < ApplicationController
+  before_action :set_incompanyrequest, only: [:edit, :update, :destroy]
   before_action :authenticate_user!
 
   def index
