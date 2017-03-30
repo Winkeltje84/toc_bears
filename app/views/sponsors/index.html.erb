@@ -1,0 +1,8 @@
+<div class="container">
+  <h2><%= @sponsor.each %></h2>
+
+  <% @sponsor.each do |sponsor| %>
+    <p><%= sponsor.name %></p>
+    <%= image_tag sponsor.image_url %>
+  <% end %>
+</div>
