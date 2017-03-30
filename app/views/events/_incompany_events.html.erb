@@ -7,21 +7,23 @@
       <th>Location</th>
       <th>Spaces Available</th>
       <th>Date</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <% if @incompany_events.count > 0 %>
       <% @incompany_events.each do |event| %>
-        <tr>
+        <tr class="clickable-row" style="cursor: pointer;" data-href='<%= event_url(event.id) %>'>
           <td><%= event.id %></td>
           <td><%= event.title %></td>
           <td><%= event.location %></td>
           <td><%= event.spaces_available %></td>
           <td><%= event.date %></td>
+          <td>buttons</td>
         </tr>
       <% end %>
     <% else %>
-      <tr><td colspan="5" style="text-align:center;">No events planned</td><tr>
+      <tr><td colspan="6" style="text-align:center;">No events planned</td><tr>
     <% end %>
   </tbody>
 </table>
