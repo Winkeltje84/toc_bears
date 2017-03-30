@@ -1,0 +1,2 @@
+class IncompanyRequestsController < ApplicationController
+end
