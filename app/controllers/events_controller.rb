@@ -19,7 +19,7 @@ class EventsController < ApplicationController
     @event = Event.create(event_params)
 
     if @event.save
-      redirect_to @event, notice: "Event created"
+      redirect_to events_path, notice: "Event created"
     else
       render :new
     end
@@ -29,8 +29,7 @@ class EventsController < ApplicationController
   end
 
   def update
-    debugger
-    event = Event.find(params[:id])
+    #event = Event.find(params[:id])
 
     if @event.update(event_params)
       redirect_to @event, notice: "Event updated"
