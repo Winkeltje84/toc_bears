@@ -29,9 +29,10 @@ class EventsController < ApplicationController
   end
 
   def update
-    @event = Event.update(event_params)
+    debugger
+    event = Event.find(params[:id])
 
-    if @event.save
+    if @event.update(event_params)
       redirect_to @event, notice: "Event updated"
     else
       render :edit
@@ -49,6 +50,6 @@ class EventsController < ApplicationController
     end
 
     def event_params
-      params.require(:event).permit(:title, :location, :spaces, :image, :public, :date)
+      params.require(:event).permit(:title, :location, :spaces_available, :image, :public, :date)
     end
 end
