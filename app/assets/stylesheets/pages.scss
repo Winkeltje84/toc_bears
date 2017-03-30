@@ -2,51 +2,57 @@
   .carousel-control {
     width: 4%;
     background-image: none;
+
     &.left {
       margin-left: 15px;
     }
+
     &.right {
       margin-right: 15px;
     }
   }
+
   .cloneditem-1,
   .cloneditem-2 {
     display: none;
   }
+
   .carousel-inner {
     @media all and (min-width: 768px) {
        @media (transform-3d), (-webkit-transform-3d){
-         > .item.next,
-        > .item.active.right {
+        > .item.active.right,
+        > .item.next {
           transform: translate3d(33.333%, 0, 0);
           left: 0;
         }
-         > .item.prev,
-        > .item.active.left {
+
+        > .item.active.left,
+        > .item.prev {
           transform: translate3d(-33.333%, 0, 0);
           left: 0;
         }
-         > .item.active,
-         > .item.prev.right,
-        > .item.left {
+
+        > .item.left,
+        > .item.prev.right,
+        > .item.active {
           transform: translate3d(0, 0, 0);
           left: 0;
         }
       }
 
-       > .prev,
-      > .active.left {
+      > .active.left,
+      > .prev {
         left: -33.333%;
       }
 
-       > .next,
-      > .active.right {
+      > .active.right,
+      > .next {
         left: 33.333%;
       }
 
-       > .active,
-       > .prev.right,
-      > .left {
+      > .left,
+      > .prev.right,
+      > .active {
         left: 0;
       }
 
@@ -55,6 +61,5 @@
         display: block;
       }
     }
-    
   }
 }
