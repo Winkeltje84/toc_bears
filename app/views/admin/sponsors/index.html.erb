@@ -14,7 +14,10 @@
           <td><%= sponsor.id %></td>
           <td><%= link_to sponsor.company_name, admin_sponsor_path(sponsor.id) %></td>
           <td><%= image_tag sponsor.logo,  height: 100, alt: "Sponsor logo" %></td>
-          <td><%= link_to "[Edit]", edit_admin_sponsor_path(sponsor.id) %></td>
+          <td>
+            <p><%= link_to "[Edit]", edit_admin_sponsor_path(sponsor.id) %></p>
+            <p><%= link_to "[Delete]", admin_sponsor_path(sponsor.id), method: :delete, data: { confirm: "Are you sure you want to delete #{sponsor.company_name}?"} %></p>
+          </td>
         </tr>
       <% end %>
     <% else %>
