@@ -4,6 +4,8 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all
+    @public_events = @events.where(public: true)
+    @incompany_events = @events.where(public: false)
   end
 
   def show
