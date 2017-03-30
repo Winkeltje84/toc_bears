@@ -4,7 +4,7 @@
 @import "bootstrap";
 @import "footer";
 
-// *******  Add fonts
+// Add fonts
 @import url(https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&subset=latin-ext);
 @import "font-awesome-sprockets";
 @import "font-awesome";
@@ -16,11 +16,10 @@ html{
 body {
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
-
   height: 100%;
 }
 
-// ******* Homepage
+// Homepage
 .cover{
   color: #fff;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
@@ -48,4 +47,10 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   padding: 10px 35px;
+}
+
+// Images
+.img-small{
+  height: 140px;
+  width: 140px;
 }
