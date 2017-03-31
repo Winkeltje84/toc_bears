@@ -33,6 +33,7 @@ body {
 
 .row{
   padding-bottom: 40px;
+  padding-top: 40px;
 }
 
 .row-secondary{
@@ -102,6 +103,14 @@ h2{
 
 .subtitle{
   font-size: 20px;
+}
+
+.top-banner{
+  background-image: url('image_attend_bg.jpg');
+  background-size: 1600px;
+  background-repeat: no-repeat;
+  height: 600px;
+  padding-top: 0px;
 }
 
 .form-newsletter{
