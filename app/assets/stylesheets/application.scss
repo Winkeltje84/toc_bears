@@ -111,6 +111,33 @@ h2{
   border-bottom: 2px solid darkgrey;
 }
 
+.carousel-caption{
+    position:static;
+}
+
+.reviews{
+  color: #fff;
+  font-weight: 100;
+  background-color: $panelcolor;
+
+  width: 600px;
+  min-height: 150px;
+  margin: 0 auto;
+
+  border-radius: 5px;
+}
+.review-text{
+  padding: 25px;
+  font-size: 20px;
+}
+
+.reviews hr{
+  width: 100px;
+  margin: 10px auto;
+  border: 0px;
+  border-bottom: 7px solid $btncolor;
+}
+
 // Images
 .img-small{
   width: 140px;
