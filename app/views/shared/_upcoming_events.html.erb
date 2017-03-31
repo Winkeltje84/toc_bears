@@ -2,7 +2,8 @@
   <h2>Upcoming Events</h2>
   <p class="lead">See What's Next!</p>
   <% @events.each do |event| %>
-  <div class="col-md-4 event">
+  <div class="col-md-4 event-wrapper">
+    <div class="event">
     <!-- workshop -->
     <!-- title of event -->
     <div class="btn btn-secondary event-workshop-type">
@@ -23,7 +24,7 @@
     <div class="rsvp">
       <button class="btn btn-secondary rsvp-button">RSVP</button>
     </div>
-
+</div>
   </div>
   <% end %>
 
