@@ -1,8 +1,7 @@
-<section class="row text-center row-secondary">
-  <%= @sponsors.each do |sponsor| %>
-    <div class="col-md-4">
-      <h4><%= sponsor.company_name %></h4>
-      <%= image_tag sponsor.logo, class: "img-getready" %>
+<section class="row text-center">
+  <% @sponsors.each do |sponsor| %>
+    <div class="col-md-4 logo">
+      <%= image_tag sponsor.logo, class: "img-sponsor-logo" %>
     </div>
   <% end %>
 </section>

@@ -13,13 +13,12 @@ User.create!(email: "wouter@codaisseur.com", password: "testing", admin: true)
 User.create!(email: "valentina@codaisseur.com", password: "testing", admin: true)
 puts "Created new users"
 
-sponsor1 = Sponsor.create!(company_name: "A Business", logo: "https://image.freepik.com/free-vector/blue-company-logo_1057-513.jpg")
-sponsor2 = Sponsor.create!(company_name: "Vision 360", logo: "https://smallbusinesslogos.files.wordpress.com/2012/02/company_logo_for_vision-360_hi-res.jpg")
-sponsor3 = Sponsor.create!(company_name: "One World", logo: "http://farm4.static.flickr.com/3254/3322981237_7e723b609e.jpg")
-sponsor4 = Sponsor.create!(company_name: "eTech", logo: "http://www.vectorea.com/tvx_uploads/5/1043-modern-etech-company-logo.jpg")
-sponsor5 = Sponsor.create!(company_name: "Oracon", logo: "https://www.logogarden.com/wp-content/uploads/lg-logo-samples/Construction-Handyman-Logo-2.png")
-sponsor6 = Sponsor.create!(company_name: "Dell", logo: "http://brandongaille.com/wp-content/uploads/2013/07/Dell-Company-Logo.jpg")
-sponsor7 = Sponsor.create!(company_name: "Shouldn't be with the first 6", logo: "https://i.ytimg.com/vi/VXF_v414FaU/maxresdefault.jpg")
+sponsor1 = Sponsor.create!(company_name: "ABN", logo: "https://github.com/Codaisseur/taste-of-code-website/blob/master/images/sponsors/abnamro.png?raw=true")
+sponsor2 = Sponsor.create!(company_name: "Codaisseur", logo: "https://github.com/Codaisseur/taste-of-code-website/blob/master/images/sponsors/codaisseur.png?raw=true")
+sponsor3 = Sponsor.create!(company_name: "Comptoir", logo: "https://github.com/Codaisseur/taste-of-code-website/blob/master/images/sponsors/comptoir.png?raw=true")
+sponsor4 = Sponsor.create!(company_name: "JPMorgan", logo: "https://github.com/Codaisseur/taste-of-code-website/blob/master/images/sponsors/jpmorgan.png?raw=true")
+sponsor5 = Sponsor.create!(company_name: "KPN", logo: "https://github.com/Codaisseur/taste-of-code-website/blob/master/images/sponsors/kpn.png?raw=true")
+sponsor6 = Sponsor.create!(company_name: "NOS", logo: "https://github.com/Codaisseur/taste-of-code-website/blob/master/images/sponsors/nos.png?raw=true")
 puts "Created new sponsors"
 
 Workshop.create!(title:"Picnic in the woods", description:"If you go down to the woods today...bears will eat you.", image:"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Brown_bear_%28Ursus_arctos_arctos%29_running.jpg/319px-Brown_bear_%28Ursus_arctos_arctos%29_running.jpg", demo_link:"https://github.com/Winkeltje84/toc_bears", github_link:"https://github.com/leefreemanxyz/codaisseurify")
