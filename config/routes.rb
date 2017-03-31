@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/attend', to: 'pages#attend'
   get '/incompany', to: 'pages#incompany'
   get '/sponsor', to: 'pages#sponsor'
+  post '/subscribe', to: 'newsletter#subscribe'
 
   devise_for :users, path: 'admin', skip: [:registrations], path_names: { sign_in: 'login', sign_out: 'logout'}
 
