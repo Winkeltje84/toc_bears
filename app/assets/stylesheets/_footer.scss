@@ -1,13 +1,9 @@
 .footer {
-  color: #fff;
-  text-align: left;
-
   bottom: 0;
-  width: 100%;
-  line-height: 30px;
-  background-color: black;
+  margin-top: 10px;
   padding-top: 30px;
   padding-bottom: 0;
+  border-top: 1px solid lightgrey;
 }
 .footer .icon-container {
     display: inline-block;
@@ -15,41 +11,18 @@
     width: 35px;
     border-radius: 50%;
     margin-right: 10px;
-    background-color: #FFFFFF;
+    background-color: grey;
     text-align: center;
     font-size: 1.2em;
-    color: #000000;
+    color: #fff;
 }
-.footer a,
-.footer a:visited, {
-  color: white;
-  text-decoration: none;
-}
+
 .footer .icon-container a {
     padding: 4px 9px;
 }
 .footer .icon-container i {
-    color: #000000;
+    color: #fff;
     line-height: 37px;
-}
-.footer .subscription-container {
-    margin-top: 60px;
-}
-.footer .footer-menu {
-    margin-top: 4px;
-}
-.footer .footer-menu li {
-    line-height: 32px;
-}
-ul:not(.browser-default) li {
-    list-style-type: none;
-}
-.footer .bank-details {
-    text-align: center;
-    margin-top: 56px;
-}
-ul.footer-menu {
-    padding-top: 20px;
 }
 .footer .icon-container:hover {
   background-color: rgb(178, 20, 34);
