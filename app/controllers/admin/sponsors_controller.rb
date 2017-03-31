@@ -28,8 +28,8 @@ class Admin::SponsorsController < ApplicationController
   def update
     #@sponsor = Sponsor.find(params[:id])
 
-    sponsor_params = params.require(:sponsor).permit(:company_name, :logo)
-    if @sponsor.update(sponsor_params)
+    #sponsor_params = params.require(:sponsor).permit(:company_name, :logo)
+    if @sponsor.update_attributes(sponsor_params)
       redirect_to @sponsor, notice: "Sponsor updated"
     else
       render 'edit'

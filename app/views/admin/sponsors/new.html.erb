@@ -1,21 +1,2 @@
-<h1>new sponsor form comes here</h1>
-
-<%= form_for @sponsor do |f| %>
-  <% @sponsor.errors.full_messages.each do |msg| %>
-    <p class="alert alert-danger"><%= msg %></p>
-  <% end %>
-
-  <div class="form-group">
-    <label>Sponsor company name</label>
-    <%= f.text_field :company_name, placeholder: "Sponsor company name", class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <label>Image url</label>
-    <%= f.text_field :logo, placeholder: "Please enter image url", class: "form-control" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Save", class: "btn btn-primary" %>
-  </div>
-<% end %>
+<h1>Create a new Sponsor</h1>
+<%= render 'form' %>

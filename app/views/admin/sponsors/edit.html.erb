@@ -1,12 +1,2 @@
-<h1>Edit Sponsor Company</h1>
-
-<%= form_for @sponsor do |f| %>
-
-  <%= f.label :company_name %>
-  <%= f.text_field :company_name %>
-
-  <%= f.label :logo %>
-  <%= f.text_field :logo %>
-
-  <%= f.submit "Update" %>
-<% end %>
+<h1>Edit Sponsor</h1>
+<%= render 'form' %>
