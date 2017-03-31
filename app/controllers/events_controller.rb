@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update]
   before_action :authenticate_user!
+  layout 'admin'
 
   def index
     @public_events = Event.open_for_public
