@@ -11,6 +11,7 @@ class PagesController < ApplicationController
   end
 
   def sponsor
+    @sponsors = Sponsor.all
     @sponsor_request = SponsorRequest.new
   end
 end
