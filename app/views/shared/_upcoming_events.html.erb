@@ -4,8 +4,6 @@
   <% @events.each do |event| %>
   <div class="col-md-4 event-wrapper">
     <div class="event">
-      <!-- workshop -->
-      <!-- title of event -->
       <div class="event-btn event-btn-secondary event-workshop-type">
         <h4><%= event.title %></h4>
       </div>
@@ -19,15 +17,10 @@
       <div class="event-time">
         <span>10am – 4pm</span>
       </div>
-      <!-- date -->
-      <!-- time -->
-      <!-- rsvp -->
       <div class="rsvp">
-        <script async src="//widgets.nvite.com/1.6/button.js" data-button-text="RSVP" data-resource="<%= event.nvite_id%>" data-class="rsvp-button"></script>
-        <!--<button class="event-btn event-btn-secondary rsvp-button">RSVP</button>-->
+        <script async src="//widgets.nvite.com/1.6/button.js" data-button-text="RSVP" data-resource="<%= event.nvite_id %>" data-class="rsvp-button"></script>
       </div>
     </div>
   </div>
   <% end %>
-
 </section>
