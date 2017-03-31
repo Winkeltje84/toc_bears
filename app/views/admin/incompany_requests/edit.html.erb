@@ -1,21 +1,24 @@
 <%= form_for [:admin, @incompanyrequest] do |f| %>
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %>
+  <p><%= f.label :first_name %>
+  <%= f.text_field :first_name %></p>
 
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %>
+  <p><%= f.label :last_name %>
+  <%= f.text_field :last_name %></p>
 
-  <%= f.label :company_name %>
-  <%= f.text_field :company_name %>
+  <p><%= f.label :company_name %>
+  <%= f.text_field :company_name %></p>
 
-  <%= f.label :date %>
-  <%= f.text_field :date %>
+  <p><%= f.label :email %>
+  <%= f.text_field :email %></p>
 
-  <%= f.label :spaces_available %>
-  <%= f.number_field :spaces_available %>
+  <p><%= f.label :date %>
+  <%= f.date_select :date %></p>
 
-  <%= f.label :workshop_id %>
-  <%= f.text_field :workshop_id %>
+  <p><%= f.label :spaces_available %>
+  <%= f.number_field :spaces_available %></p>
+
+  <p><%= f.label :workshop_id %>
+  <%= f.text_field :workshop_id %></p>
 
   <%= f.submit "Save", class: "btn btn-primary" %>
 <% end %>

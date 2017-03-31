@@ -17,9 +17,9 @@ class Admin::IncompanyRequestsController < ApplicationController
     @incompanyrequest = IncompanyRequest.find(params[:id])
 
     if @incompanyrequest.update_attributes(incompanyrequest_params)
-      redirect_to admin_incompany_requests_path(@incompanyrequest.id), notice: 'Item was successfully updated.'
+      redirect_to admin_incompany_requests_path(@incompanyrequest.id)
     else
-      render :edit, notice: 'Can you please make sure all fields are filled out correctly?'
+      render :edit
     end
   end
 
@@ -39,7 +39,7 @@ private
   end
 
   def incompanyrequest_params
-    params.require(:incompany_request).permit(:first_name, :last_name, :email, :company_name, :workshop_id)
+    params.require(:incompany_request).permit(:first_name, :last_name, :email, :company_name, :date, :spaces_available, :workshop_id)
   end
 
 end
