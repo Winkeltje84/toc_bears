@@ -1,0 +1,18 @@
+<section class="workshops">
+  <div class="row">
+    <% @workshops.each do |workshop| %>
+    <div class="col-sm-4">
+      <img src="http://lorempixel.com/400/200/" />
+      <h3><%= workshop.title %></h3>
+      <div class="row">
+        <div class="col-sm-6">
+          <%= link_to "GitHub", workshop.github_link %>
+        </div>
+        <div class="col-sm-6">
+          <%= link_to "Demo", workshop.demo_link %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+</section>
