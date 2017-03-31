@@ -1,4 +1,6 @@
 class Admin::SponsorRequestsController < ApplicationController
+
+
   def index
     @sponsor_requests = SponsorRequest.all
   end

@@ -1,0 +1,31 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Title</th>
+      <th>Location</th>
+      <th>Spaces Available</th>
+      <th>Date</th>
+      <th>Nvite ID</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if sponsor_requests.count > 0 %>
+      <% sponsor_requests.each do |request| %>
+        <tr>
+          <td><%= sponsor_request.id %></td>
+          <td><%= sponsor_request.company_name %></td>
+          <td><%= sponsor_request.date.strftime("%d-%m-%Y") %></td>
+          <td>
+            <%= link_to admin_sponsor_request_path(sponsor_request.id), class: "button" do %><i class="fa fa-eye" aria-hidden="true"></i><% end %>
+            <%= link_to edit_admin_sponsor_request_path(sponsor_request.id), class: "button orange" do %><i class="fa fa-pencil" aria-hidden="true"></i><% end %>
+            <%= link_to admin_sponsor_request_path(sponsor_request.id), data: {confirm: "Are you sure?"}, class: "button red" do %><i class="fa fa-trash" aria-hidden="true"></i><% end %>
+          </td>
+        </tr>
+      <% end %>
+    <% else %>
+      <tr><td colspan="6" style="text-align:center;">No requests </td><tr>
+    <% end %>
+  </tbody>
+</table>
