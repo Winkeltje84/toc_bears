@@ -1,4 +1,4 @@
-<%= form_for @event do |f| %>
+<%= form_for [ :admin, @event] do |f| %>
   <% @event.errors.full_messages.each do |msg| %>
     <p class="alert alert-danger"><%= msg %></p>
   <% end %>
@@ -26,6 +26,11 @@
   <div class="form-group">
     <label>Image Url</label>
     <%= f.text_field :image, placeholder: "eq. http://cd.sseu.re/image.png", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <label>Nvite ID</label>
+    <%= f.text_field :nvite_id, placeholder: "eq. 57463", class: "form-control" %>
   </div>
 
   <div class="form-group">

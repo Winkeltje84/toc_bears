@@ -1,4 +1,4 @@
-class EventsController < ApplicationController
+class Admin::EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
   layout 'admin'
@@ -19,7 +19,7 @@ class EventsController < ApplicationController
     @event = Event.create(event_params)
 
     if @event.save
-      redirect_to events_path, notice: "Event created"
+      redirect_to admin_events_path, notice: "Event created"
     else
       render :new
     end
@@ -32,7 +32,7 @@ class EventsController < ApplicationController
     #event = Event.find(params[:id])
 
     if @event.update(event_params)
-      redirect_to @event, notice: "Event updated"
+      redirect_to admin_event_path(@event), notice: "Event updated"
     else
       render :edit
     end
@@ -40,7 +40,7 @@ class EventsController < ApplicationController
 
   def destroy
     @event.delete
-    redirect_to events_path, notice: "Event has been destroyed"
+    redirect_to admin_events_path, notice: "Event has been destroyed"
   end
 
   private
@@ -49,6 +49,6 @@ class EventsController < ApplicationController
     end
 
     def event_params
-      params.require(:event).permit(:title, :location, :spaces_available, :image, :public, :date)
+      params.require(:event).permit(:title, :location, :spaces_available, :image, :public, :date, :nvite_id)
     end
 end

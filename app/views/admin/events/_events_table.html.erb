@@ -6,6 +6,7 @@
       <th>Location</th>
       <th>Spaces Available</th>
       <th>Date</th>
+      <th>Nvite ID</th>
       <th>Actions</th>
     </tr>
   </thead>
@@ -18,10 +19,11 @@
           <td><%= event.location %></td>
           <td><%= event.spaces_available %></td>
           <td><%= event.date.strftime("%d-%m-%Y") %></td>
+          <td><%= event.nvite_id %></td>
           <td>
-            <%= link_to event_path(event.id), class: "button" do %><i class="fa fa-eye" aria-hidden="true"></i><% end %>
-            <%= link_to edit_event_path(event.id), class: "button orange" do %><i class="fa fa-pencil" aria-hidden="true"></i><% end %>
-            <%= link_to event_path(event.id), data: {confirm: "Are you sure?"}, class: "button red" do %><i class="fa fa-trash" aria-hidden="true"></i><% end %>
+            <%= link_to admin_event_path(event.id), class: "button" do %><i class="fa fa-eye" aria-hidden="true"></i><% end %>
+            <%= link_to edit_admin_event_path(event.id), class: "button orange" do %><i class="fa fa-pencil" aria-hidden="true"></i><% end %>
+            <%= link_to admin_event_path(event.id), data: {confirm: "Are you sure?"}, class: "button red" do %><i class="fa fa-trash" aria-hidden="true"></i><% end %>
           </td>
         </tr>
       <% end %>
