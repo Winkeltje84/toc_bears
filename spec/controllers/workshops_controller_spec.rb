@@ -32,16 +32,16 @@ RSpec.describe WorkshopsController, type: :controller do
       assert_redirected_to workshop_path(assigns(:workshop).id)
     end
   end
-  describe 'POST #create' do
-    it 'redirects to the new workshop' do
-      post :create, workshop: FactoryGirl.attributes_for(:workshop)
-      assert_redirected_to workshop_path(assigns(:workshop).id)
-    end
-  end
   describe 'PATCH/PUT #update' do
     it 'redirects to the workshop path' do
       patch :update, params: { id: workshop.id, workshop: workshop.attributes = { title: 'Three bears eating porridge on a cold day' } }
       assert_redirected_to workshop_path(workshop.id)
+    end
+  end
+  describe 'PATCH/PUT #update' do
+    it 'an invalid update redirects to the edit page' do
+      patch :update, params: { id: workshop.id, workshop: workshop.attributes = { title: '' } }
+      assert_template :edit
     end
   end
   describe 'DELETE #destroy' do
