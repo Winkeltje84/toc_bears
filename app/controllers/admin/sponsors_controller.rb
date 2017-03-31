@@ -2,6 +2,8 @@ class Admin::SponsorsController < ApplicationController
   before_action :set_sponsor, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
+  layout 'admin'
+
   def new
     @sponsor = Sponsor.new
   end

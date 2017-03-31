@@ -23,7 +23,7 @@
           <td>
             <%= link_to admin_event_path(event.id), class: "button" do %><i class="fa fa-eye" aria-hidden="true"></i><% end %>
             <%= link_to edit_admin_event_path(event.id), class: "button orange" do %><i class="fa fa-pencil" aria-hidden="true"></i><% end %>
-            <%= link_to admin_event_path(event.id), data: {confirm: "Are you sure?"}, class: "button red" do %><i class="fa fa-trash" aria-hidden="true"></i><% end %>
+            <%= link_to admin_event_path(event.id), method: :delete, data: {confirm: "Are you sure?"}, class: "button red" do %><i class="fa fa-trash" aria-hidden="true"></i><% end %>
           </td>
         </tr>
       <% end %>
