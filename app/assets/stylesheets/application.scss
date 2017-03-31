@@ -28,7 +28,6 @@ body {
   background-color: #FAF5EF;
   height: 100%;
   background-color:$light-peach;
-  background-repeat:no-repeat;
 }
 
 .row{
@@ -66,7 +65,9 @@ body {
   align-items: center;
   flex-direction:column;
   justify-content: space-between;
-  background-image: url("../../assets/homepage_bg.png")
+  background-image: url("../../assets/homepage_bg.png");
+  background-size:cover;
+  background-repeat:no-repeat;
 }
 .homepage-cover{
   color: #fff;
@@ -76,6 +77,9 @@ body {
   flex-direction:column;
   justify-content: space-between;
   background-image: url("../../assets/homepage_bg.png");
+  background-size:cover;
+  background-repeat:no-repeat;
+
   .img-small {
     position:absolute;
     top:0;
@@ -160,7 +164,9 @@ h2{
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: flex-start;;
+  justify-content: flex-start;
+  background-size:cover;
+  background-repeat:no-repeat;
 }
 
 .form-newsletter{
@@ -195,7 +201,7 @@ h2{
   font-size: 18px;
 }
 
-hr{
+.orange-hr{
   width: 100px;
   margin: 10px auto;
   border: 0px;
