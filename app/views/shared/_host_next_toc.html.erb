@@ -1,39 +1,27 @@
-<section class="row text-center">
-  <h2> Host next TOC </h2>
-  <p class="lead"> Talk to us </p>
+<section>
+<%= form_for [:admin, @incompanyrequest] do |f| %>
 
-  <form>
-    <input type="text" id="input_first_name" class="form-control" placeholder="First Name" required="" autofocus="">
-    <input type="text" id="input_last_name" class="form-control" placeholder="Last Name" required="" autofocus="">
-    <input type="text" id="input_company_name" class="form-control" placeholder="Company Name" required="" autofocus="">
-    <input type="text" id="input_email" class="form-control" placeholder="Email" required="" autofocus="">
+  <p><%= f.label :first_name %>
+  <%= f.text_field :first_name %></p>
 
-    <div class="form-group">
-      <div class='input-group date' id='datetimepicker9'>
-        <input type='text' class="form-control" placeholder="Date (ex. 03/29/2017 3:00 PM)"/>
-          <span class="input-group-addon">
-            <span class="glyphicon glyphicon-calendar"></span>
-          </span>
-      </div>
+  <p><%= f.label :last_name %>
+  <%= f.text_field :last_name %></p>
 
-      Number of People:
-      <div class="input-group number-spinner">
-        <span class="input-group-btn data-dwn">
-          <button class="btn btn-default btn-info" data-dir="dwn">
-            <span class="glyphicon glyphicon-minus"></span>
-          </button>
-        </span>
-        <input type="text" class="form-control text-center" value="1" min="1" max="100">
-        <span class="input-group-btn data-up">
-          <button class="btn btn-default btn-info" data-dir="up">
-            <span class="glyphicon glyphicon-plus"></span>
-          </button>
-        </span>
-      </div>
+  <p><%= f.label :company_name %>
+  <%= f.text_field :company_name %></p>
 
-      <textarea class="form-control" id="comment" placeholder="Comment" rows="5"></textarea>
-    </div>
+  <p><%= f.label :email %>
+  <%= f.text_field :email %></p>
 
-    <button type ="submit" class="btn btn-primary">Submit</button>
-  </form>
+  <p><%= f.label :date %>
+  <%= f.text_field :date, "data-provide" => 'datepicker' %></p>
+
+  <p><%= f.label :spaces_available %>
+  <%= f.number_field :spaces_available %></p>
+
+  <p><%= f.label :workshop_id %>
+  <%= f.text_field :workshop_id %></p>
+
+  <%= f.submit "Save", class: "btn btn-primary"%>
+<% end %>
 </section>

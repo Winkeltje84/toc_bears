@@ -23,6 +23,20 @@ class Admin::IncompanyRequestsController < ApplicationController
     end
   end
 
+  def new
+    @incompanyrequest = IncompanyRequest.new
+  end
+
+  def create
+    @incompanyrequest = IncompanyRequest.create(incompanyrequest_params)
+
+    if @incompanyrequest.save(incompanyrequest_params)
+      redirect_to admin_incompany_requests_path(@incompanyrequest.id), notice: "IncompanyRequest sent!"
+    else
+      redirect_to incompany
+    end
+  end
+
   def destroy
     if @incompanyrequest.destroy
       redirect_to admin_incompany_requests_path, notice: "Request has been removed"
