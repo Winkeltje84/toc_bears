@@ -4,27 +4,29 @@
   <% @events.each do |event| %>
   <div class="col-md-4 event-wrapper">
     <div class="event">
-    <!-- workshop -->
-    <!-- title of event -->
-    <div class="btn btn-secondary event-workshop-type">
-      <h4><%= event.title %></h4>
+      <!-- workshop -->
+      <!-- title of event -->
+      <div class="event-btn event-btn-secondary event-workshop-type">
+        <h4><%= event.title %></h4>
+      </div>
+      <div class="event-location">
+        <span>Taste of Code<br/>at
+          <%= event.location %></span>
+      </div>
+      <div class="event-date">
+        <span><%= event.date.strftime("%B %d") %></span>
+      </div>
+      <div class="event-time">
+        <span>10am – 4pm</span>
+      </div>
+      <!-- date -->
+      <!-- time -->
+      <!-- rsvp -->
+      <div class="rsvp">
+        <script async src="//widgets.nvite.com/1.6/button.js" data-button-text="RSVP" data-resource="eoed2l" data-class="rsvp-button"></script>
+        <!--<button class="event-btn event-btn-secondary rsvp-button">RSVP</button>-->
+      </div>
     </div>
-    <div class="event-location">
-      <span>Taste of Code<br/>at <%= event.location %></span>
-    </div>
-    <div class="event-date">
-      <span><%= event.date.strftime("%B %d") %></span>
-    </div>
-    <div class="event-time">
-      <span>10am – 4pm</span>
-    </div>
-    <!-- date -->
-    <!-- time -->
-    <!-- rsvp -->
-    <div class="rsvp">
-<script async src="//widgets.nvite.com/1.6/button.js" data-button-text="RSVP" data-resource="xvgxw4" data-class="rsvp-button"></script>      <button class="btn btn-secondary rsvp-button">RSVP</button>
-    </div>
-</div>
   </div>
   <% end %>
 
