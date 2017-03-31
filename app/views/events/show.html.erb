@@ -1,0 +1,11 @@
+<div class="container">
+  <h2><%= @event.title %></h2>
+  <strong>Location: </strong><%= @event.location %></br>
+  <strong>Spaces Available: </strong><%= @event.spaces_available %></br>
+  <strong>Date: </strong><%= @event.date %><br>
+  <%= image_tag @event.image %>
+  <hr>
+  <%= link_to "All Events", events_path, class: "btn btn-sm btn-default" %>
+  <%= link_to "Edit Event", edit_event_path, class: "btn btn-sm btn-default" %>
+  <%= link_to "Delete Event", event_path, method: :delete, class: "btn btn-sm btn-danger" %>
+</div>

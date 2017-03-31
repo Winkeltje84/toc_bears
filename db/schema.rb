@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20170331104603) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,11 +20,11 @@ ActiveRecord::Schema.define(version: 20170331104603) do
   create_table "events", force: :cascade do |t|
     t.string   "title"
     t.string   "location"
-    t.integer  "spaces"
+    t.integer  "spaces_available"
     t.string   "image"
-    t.boolean  "public",     default: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.boolean  "public",           default: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.datetime "date"
   end
 
@@ -38,17 +40,7 @@ ActiveRecord::Schema.define(version: 20170331104603) do
     t.datetime "updated_at",       null: false
   end
 
-  create_table "sponsorrequests", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "company_name"
-    t.string   "email"
-    t.integer  "date"
-    t.integer  "spaces_available"
-    t.text     "comments"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-  end
+
 
   create_table "sponsors", force: :cascade do |t|
     t.string   "company_name"

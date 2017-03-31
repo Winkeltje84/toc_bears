@@ -28,29 +28,29 @@ RSpec.describe Event, type: :model do
     end
     context "spaces attribute" do
       it "Is invalid without it" do
-        event = Event.new(spaces: "")
+        event = Event.new(spaces_available: "")
         event.valid?
-        expect(event.errors).to have_key(:spaces)
+        expect(event.errors).to have_key(:spaces_available)
       end
       it "Is valid with it" do
-        event = Event.new(spaces: 25)
+        event = Event.new(spaces_available: 25)
         event.valid?
-        expect(event.errors).not_to have_key(:spaces)
+        expect(event.errors).not_to have_key(:spaces_available)
       end
       it "is invalid if not an integer" do
-        event = Event.new(spaces: "text")
+        event = Event.new(spaces_available: "text")
         event.valid?
-        expect(event.errors).to have_key(:spaces)
+        expect(event.errors).to have_key(:spaces_available)
       end
       it "is invalid with an decimal" do
-        event = Event.new(spaces: 0.5)
+        event = Event.new(spaces_available: 0.5)
         event.valid?
-        expect(event.errors).to have_key(:spaces)
+        expect(event.errors).to have_key(:spaces_available)
       end
       it "is valid with an integer" do
-        event = Event.new(spaces: 5)
+        event = Event.new(spaces_available: 5)
         event.valid?
-        expect(event.errors).not_to have_key(:spaces)
+        expect(event.errors).not_to have_key(:spaces_available)
       end
     end
   end
