@@ -102,6 +102,7 @@ body {
 }
 .event-location{
   font-size:24px;
+  padding-bottom:5px;
 }
 .event-date, .event-time{
   font-size:18px;
@@ -113,10 +114,10 @@ body {
   margin-bottom:30px;
 }
 .rsvp{
-  padding:20px;
+  padding:20px !important;
 }
 .rsvp-button{
-  width:30%;
-  background-color: $panelcolor;
-  box-shadow: 0px 3px $btnshadow;
+  width:30% !important;
+  background-color: $panelcolor !important;
+  box-shadow: 0px 3px $btnshadow !important;
 }
