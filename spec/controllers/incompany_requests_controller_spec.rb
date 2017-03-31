@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe IncompanyRequestsController, type: :controller do
-
+RSpec.describe Admin::IncompanyRequestsController, type: :controller do
+  pending "add some tests to me"
 end

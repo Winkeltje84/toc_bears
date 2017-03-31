@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe SponsorRequestsController, type: :controller do
+RSpec.describe Admin::SponsorRequestsController, type: :controller do
 
 end

@@ -37,9 +37,9 @@ class Admin::SponsorsController < ApplicationController
     @sponsor.destroy
     redirect_to admin_sponsors_path, notice: "Sponsor deleted"
   end
-end
 
-private
+  private
+
   def set_sponsor
     @sponsor = Sponsor.find(params[:id])
   end
@@ -47,3 +47,4 @@ private
   def sponsor_params
     params.require(:sponsor).permit(:company_name, :logo)
   end
+end
