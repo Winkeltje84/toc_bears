@@ -1,4 +1,4 @@
-<%= form_for @sponsor do |f| %>
+<%= form_for [:admin, @sponsor] do |f| %>
   <% @sponsor.errors.full_messages.each do |msg| %>
     <p class="alert alert-danger"><%= msg %></p>
   <% end %>

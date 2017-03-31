@@ -26,22 +26,11 @@ class Admin::SponsorsController < ApplicationController
   end
 
   def update
-    #@sponsor = Sponsor.find(params[:id])
-
-    #sponsor_params = params.require(:sponsor).permit(:company_name, :logo)
     if @sponsor.update_attributes(sponsor_params)
-      redirect_to @sponsor, notice: "Sponsor updated"
+      redirect_to [:admin, @sponsor], notice: "Sponsor updated"
     else
       render 'edit'
     end
-
-    #@sponsor = Sponsor.update(sponsor_params)
-
-    #if @sponsor.save
-    #  redirect_to @sponsor, notice: "Sponsor updated"
-    #else
-    #  render :edit
-    #end
   end
 
   #def update
