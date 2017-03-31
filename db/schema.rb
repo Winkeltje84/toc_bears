@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170330091317) do
+
+ActiveRecord::Schema.define(version: 20170330101723) do
+IncompanyRequest Model and Validations
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +26,18 @@ ActiveRecord::Schema.define(version: 20170330091317) do
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
     t.datetime "date"
+  end
+
+  create_table "incompany_requests", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "company_name"
+    t.string   "email"
+    t.datetime "date"
+    t.integer  "spaces_available"
+    t.text     "comments"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "sponsors", force: :cascade do |t|
