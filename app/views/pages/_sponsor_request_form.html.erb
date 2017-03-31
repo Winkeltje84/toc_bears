@@ -9,11 +9,17 @@
    <%= f.label :company_name %>
    <%= f.text_field :company_name %>
 
+   <%= f.label :email %>
+   <%= f.text_field :email %>
+
    <%= f.label :date %>
    <%= f.text_field :date %>
 
+   <%= f.label :comments %>
+   <%= f.text_area :comments %>
+
    <%= f.label :spaces_available %>
-   <%= f.number_field :spaces_available %>
+   <%= f.number_field :places_available %>
 
    <%= f.submit "Create", class: "btn btn-primary" %>
    <% end %>
