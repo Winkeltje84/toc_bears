@@ -122,13 +122,15 @@ h2{
 
   width: 600px;
   min-height: 150px;
-  margin: 0 auto;
+  margin: 20px auto;
+  padding-bottom: 10px;
 
   border-radius: 5px;
 }
+
 .review-text{
   padding: 25px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .reviews hr{
@@ -136,6 +138,21 @@ h2{
   margin: 10px auto;
   border: 0px;
   border-bottom: 7px solid $btncolor;
+}
+
+.carousel-indicators{
+  bottom: -50px;
+}
+
+.carousel-indicators li{
+  background-color: grey;
+  border: 0px;
+  width: 12px;
+  height: 12px;
+}
+
+.carousel-indicators li.active{
+  background-color: $btncolor;
 }
 
 // Images
