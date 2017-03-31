@@ -1,42 +1,33 @@
 <section class="row text-center">
   <h2>Upcoming Events</h2>
   <p class="lead">See What's Next!</p>
+  <% @events.each do |event| %>
+  <div class="col-md-4 event-wrapper">
+    <div class="event">
+      <!-- workshop -->
+      <!-- title of event -->
+      <div class="event-btn event-btn-secondary event-workshop-type">
+        <h4><%= event.title %></h4>
+      </div>
+      <div class="event-location">
+        <span>Taste of Code<br/>at
+          <%= event.location %></span>
+      </div>
+      <div class="event-date">
+        <span><%= event.date.strftime("%B %d") %></span>
+      </div>
+      <div class="event-time">
+        <span>10am – 4pm</span>
+      </div>
+      <!-- date -->
+      <!-- time -->
+      <!-- rsvp -->
+      <div class="rsvp">
+        <script async src="//widgets.nvite.com/1.6/button.js" data-button-text="RSVP" data-resource="eoed2l" data-class="rsvp-button"></script>
+        <!--<button class="event-btn event-btn-secondary rsvp-button">RSVP</button>-->
+      </div>
+    </div>
+  </div>
+  <% end %>
 
-  <div class="col-md-4">
-    <div class="panel panel-default">
-      <div class="panel-image">
-        <%= image_tag 'stupid_events.jpg', class: "img-carousel", alt: "Events" %>
-      </div>
-      <div class="panel-body">
-        <h4>Title</h4>
-        <p>text</p>
-      </div>
-      <a href="" class="btn btn-primary"> Register Now </a>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="panel panel-default">
-      <div class="panel-image">
-        <%= image_tag 'stupid_events.jpg', class: "img-carousel", alt: "Events" %>
-      </div>
-      <div class="panel-body">
-        <h4>Title</h4>
-        <p>text</p>
-      </div>
-      <a href="" class="btn btn-primary"> Register Now </a>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="panel panel-default">
-      <div class="panel-image">
-        <%= image_tag 'stupid_events.jpg', class: "img-carousel", alt: "Events" %>
-      </div>
-      <div class="panel-body">
-        <h4>Title</h4>
-        <p>text</p>
-      </div>
-      <a href="" class="btn btn-primary"> Register Now </a>
-    </div>
-  </div>
 </section>
