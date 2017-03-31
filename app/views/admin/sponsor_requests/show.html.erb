@@ -1,0 +1,11 @@
+<section>
+<div class="container">
+  <h2><%= @sponsor_request.company_name %></h2>
+  <strong>Spaces Available: </strong><%= @sponsor_request.spaces_available %></br>
+  <strong>Date: </strong><%= @sponsor_request.date %><br>
+  <hr>
+  <%= link_to "All Sponsor Requests", sponsor_requests_path, class: "btn btn-sm btn-default" %>
+  <%= link_to "Edit Sponsor Request", edit_sponsor_request_path, class: "btn btn-sm btn-default" %>
+  <%= link_to "Delete Sponsor Request", sponsor_request_path, method: :delete, class: "btn btn-sm btn-danger" %>
+</div>
+</section>

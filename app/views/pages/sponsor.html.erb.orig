@@ -1,0 +1,14 @@
+<%= render 'shared/navbar' %>
+
+<<<<<<< HEAD
+<%= render 'shared/topbanner' %>
+<%= render 'shared/why_host_toc' %>
+<%= render 'shared/get_ready' %>
+=======
+
+<%= render 'shared/why_host_toc' %>
+
+>>>>>>> modidfied form
+<%= render 'sponsor_request_form' %>
+<%= render 'shared/sponsors' %>
+<%= render 'shared/footer' %>
