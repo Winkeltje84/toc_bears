@@ -6,5 +6,7 @@ class PagesController < ApplicationController
   end
 
   def incompany;end
-  def sponsor;end
+  def sponsor
+    @sponsor_request = SponsorRequest.new
+  end
 end

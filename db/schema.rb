@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170329132752) do
+ActiveRecord::Schema.define(version: 20170331104603) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,14 +18,40 @@ ActiveRecord::Schema.define(version: 20170329132752) do
   create_table "events", force: :cascade do |t|
     t.string   "title"
     t.string   "location"
-    t.integer  "spaces"
+    t.integer  "spaces_available"
     t.string   "image"
-    t.boolean  "public",     default: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.boolean  "public",           default: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.datetime "date"
   end
 
+  create_table "incompany_requests", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "company_name"
+    t.string   "email"
+    t.datetime "date"
+    t.integer  "spaces_available"
+    t.text     "comments"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "workshop_id"
+    t.index ["workshop_id"], name: "index_incompany_requests_on_workshop_id", using: :btree
+  end
+
+  create_table "sponsor_requests", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "company_name"
+    t.integer  "places_available"
+    t.string   "email"
+    t.date     "date"
+    t.text     "comments"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+  
   create_table "sponsors", force: :cascade do |t|
     t.string   "company_name"
     t.string   "logo"
@@ -61,4 +87,5 @@ ActiveRecord::Schema.define(version: 20170329132752) do
     t.datetime "updated_at",  null: false
   end
 
+  add_foreign_key "incompany_requests", "workshops"
 end

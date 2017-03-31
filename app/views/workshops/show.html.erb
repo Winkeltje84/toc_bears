@@ -1,0 +1,7 @@
+<h3><%= @workshop.title %></h3>
+<p><%= @workshop.description %></p>
+<%= link_to "Demo", @workshop.demo_link %>
+<%= link_to "GitHub", @workshop.github_link %>
+<img src="<%= @workshop.image %>"/>
+<%= link_to "Back to all the workshops", workshops_path %>
+<%= link_to "Edit this workshop", edit_workshop_path(@workshop) %>
