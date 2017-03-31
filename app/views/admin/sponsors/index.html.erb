@@ -1,0 +1,28 @@
+<h3><%= link_to "[New Sponsor]", new_admin_sponsor_path %></h3>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Company name</th>
+      <th>Company logo</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @sponsors.count > 0 %>
+      <% @sponsors.each do |sponsor| %>
+        <tr class="clickable-row" data-href='<%= sponsor_url(sponsor.id) %>'>
+          <td><%= sponsor.id %></td>
+          <td><%= link_to sponsor.company_name, admin_sponsor_path(sponsor) %></td>
+          <td><%= image_tag sponsor.logo,  height: 100, alt: "Sponsor logo" %></td>
+          <td>
+            <p><%= link_to "[Edit]", edit_admin_sponsor_path(sponsor) %></p>
+            <p><%= link_to "[Delete]", admin_sponsor_path(sponsor), method: :delete, data: { confirm: "Are you sure you want to delete #{sponsor.company_name}?"} %></p>
+          </td>
+        </tr>
+      <% end %>
+    <% else %>
+      <tr><td colspan="6" style="text-align:center;">No sponsors exist yet</td><tr>
+    <% end %>
+  </tbody>
+</table>
