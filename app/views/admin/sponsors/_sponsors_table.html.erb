@@ -1,0 +1,28 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Company name</th>
+      <th>Company logo</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @sponsors.count > 0 %>
+      <% @sponsors.each do |sponsor| %>
+        <tr class="clickable-row" data-href='<%= sponsor_url(sponsor.id) %>'>
+          <td><%= sponsor.id %></td>
+          <td><%= link_to sponsor.company_name, admin_sponsor_path(sponsor) %></td>
+          <td><%= image_tag sponsor.logo,  height: 100, alt: "Sponsor logo" %></td>
+          <td>
+            <%= link_to admin_sponsor_path(sponsor.id), class: "button" do %><i class="fa fa-eye" aria-hidden="true"></i><% end %>
+            <%= link_to edit_admin_sponsor_path(sponsor.id), class: "button orange" do %><i class="fa fa-pencil" aria-hidden="true"></i><% end %>
+            <%= link_to admin_sponsor_path(sponsor.id), method: :delete, data: {confirm: "Are you sure?"}, class: "button red" do %><i class="fa fa-trash" aria-hidden="true"></i><% end %>
+          </td>
+        </tr>
+      <% end %>
+    <% else %>
+      <tr><td colspan="6" style="text-align:center;">No sponsors exist yet</td><tr>
+    <% end %>
+  </tbody>
+</table>
