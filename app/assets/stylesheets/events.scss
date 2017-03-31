@@ -1,0 +1,20 @@
+tr.clickable-row {
+  cursor: pointer;
+}
+tr.clickable-row:hover {
+  background-color: aliceblue !important;
+}
+tr a {
+  text-decoration: none;
+  color: #333333;
+}
+tr a.button {
+  z-index: 500;
+  padding: 0 5px;
+}
+tr a.button.red {
+  color: darkred;
+}
+tr a.button.orange {
+  color: orange;
+}
