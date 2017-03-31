@@ -10,7 +10,6 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-$btncolor: #FF9062;
 $btnshadow: #EB5357;
 $panelcolor: #5EB4AF;
 $light-peach: #faf5ef;
@@ -32,7 +31,7 @@ body {
 }
 
 .row{
-  padding: 40px 0;
+  padding-bottom: 40px;
 }
 
 .row-secondary{
@@ -43,7 +42,7 @@ body {
 .btn-secondary:hover,
 .btn-secondary:focus {
   color: #fff;
-  background-color: $btncolor;
+  background-color: $deep-peach;
   box-shadow: 0px 3px $btnshadow;
 
   margin-left: 15px;
@@ -137,7 +136,7 @@ h2{
   width: 100px;
   margin: 10px auto;
   border: 0px;
-  border-bottom: 7px solid $btncolor;
+  border-bottom: 7px solid $deep-peach;
 }
 
 .carousel-indicators{
@@ -152,7 +151,7 @@ h2{
 }
 
 .carousel-indicators li.active{
-  background-color: $btncolor;
+  background-color: $deep-peach;
 }
 
 // Images
