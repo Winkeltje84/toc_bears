@@ -1,13 +1,15 @@
 <h1>Incompany Requests</h1>
 
 
+<% if @incompanyrequests.present? %>
   <% @incompanyrequests.each do |incompanyrequest| %>
-    <p>Name: <%= incompanyrequest.first_name + "" %> <%= incompanyrequest.last_name %></p>
-    <p>Company Name: <%= incompanyrequest.company_name %></p>
-    <p>Requested Date: <%= incompanyrequest.date %> </p>
-    <p>Spaces Available (capacity):<%= incompanyrequest.spaces_available %></p>
-    <p>Workshop #:<%= incompanyrequest.workshop_id %></p>
+    <p><b>Name: </b><%= incompanyrequest.first_name + "" %> <%= incompanyrequest.last_name %></p>
+    <p><b>Company Name:</b> <%= incompanyrequest.company_name %></p>
+    <p><b>Requested Date:</b> <%= incompanyrequest.date %> </p>
+    <p><b>Spaces Available (capacity):</b><%= incompanyrequest.spaces_available %></p>
+    <p><b>Workshop #:</b><%= incompanyrequest.workshop_id %></p>
+    <%= link_to "Edit Request", edit_admin_incompany_request_path(incompanyrequest.id), class:"btn btn-primary" %>
+    <%= link_to "Delete Request", admin_incompany_request_path(incompanyrequest.id), class:"btn btn-primary", method: :delete, data: { confirm: "Are you sure?" }  %>
     <hr>
-    <%= link_to "Edit Request", edit_admin_incompany_requests_path(@incompany_request.id), class:"btn-btn-primary" %>
-    <%= link_to "Delete Request", admin_incompany_request(@incompanyrequest.id),  method: :delete, class:"btn-btn-primary" data:{confirm:"Are you sure you want to delete this artist and all their songs?"} %>
+    <% end %>
   <% end %>

@@ -1,6 +1,6 @@
 class Admin::IncompanyRequestsController < ApplicationController
   before_action :set_incompanyrequest, only: [:edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:show]
+  before_action :authenticate_user!
 
   def index
     @incompanyrequests = IncompanyRequest.all
@@ -9,38 +9,29 @@ class Admin::IncompanyRequestsController < ApplicationController
   def show
   end
 
-  def new
-    @incompanyrequest = IncompanyRequest.new
-  end
-
-  def create
-    @incompanyrequest = IncompanyRequest.new(incompanyrequest_params)
-
-    if @incompanyrequest.save
-      redirect_to @incompanyrequest, notice: 'Event request was succesfully created.'
-    else
-      render 'new'
-    end
-  end
-
   def edit
       @incompanyrequest = IncompanyRequest.find(params[:id])
+      render :edit
   end
 
   def update
     @incompanyrequest = IncompanyRequest.find(params[:id])
 
     if @incompanyrequest.update_attributes(incompanyrequest_params)
-      redirect_to @incompanyrequest
+      redirect_to admin_incompany_requests_path(@incompanyrequest.id), notice: 'Item was successfully updated.'
     else
       render 'edit'
     end
   end
 
   def destroy
-    @incompanyrequest = IncompanyRequest.find(params[:id])
-    @incompanyrequest.destroy
+    if @incompanyrequest.destroy
+      redirect_to admin_incompany_requests_path, notice: "Request has been removed"
+    else
+      redirect_to admin_incompany_requests_path(@incompanyrequest.id)
+    end
   end
+
 
 private
 
@@ -49,7 +40,7 @@ private
   end
 
   def incompanyrequest_params
-    params.require(:incompanyrequest).permit(:first_name, :last_name, :email, :company_name)
+    params.require(:incompanyrequest).permit(:first_name, :last_name, :email, :company_name, :workshop_id)
   end
 
 end

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   namespace 'admin' do
     resources :workshops, :events
-    resources :incompany_requests
+    resources :incompany_requests, only:[:index, :edit, :update, :destroy]
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
