@@ -2,6 +2,15 @@
   <h2>Join our Newsletter</h2>
   <p class="subtitle">Make sure you don't miss any of our upcoming workshops!</p>
 
+  <div class="flashmessages">
+  <% flash.each do |key, value| %>
+      <%= if key == "alert"; ( content_tag :div, value, class: "alert alert-danger" )
+        elsif key == "notice"; ( content_tag :div, value, class: "alert alert-success" )
+        else ( content_tag :div, value, class: "alert alert-info" )
+      end %>
+    <% end %>
+  </div>
+
   <%= form_tag('/subscribe', id: "subscribe" ) do %>
     <%= email_field :email, :address, {id: "email", placeholder: "Enter your email address", class: "form-newsletter"} %>
     <%= submit_tag "Subscribe", class: "btn btn-secondary" %>
