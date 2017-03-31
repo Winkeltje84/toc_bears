@@ -7,8 +7,9 @@ Rails.application.routes.draw do
 
   devise_for :users, path: 'admin', skip: [:registrations], path_names: { sign_in: 'login', sign_out: 'logout'}
 
-  scope '/admin' do
+  namespace 'admin' do
     resources :workshops, :events, :sponsor_requests
+    resources :incompany_requests, only:[:index, :edit, :update, :destroy]
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
