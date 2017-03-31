@@ -11,10 +11,7 @@ class Admin::SponsorsController < ApplicationController
   end
 
   def create
-
     @sponsor = Sponsor.create(sponsor_params)
-
-
     if @sponsor.save
       redirect_to admin_sponsors_path, notice: "Sponsor created"
     else
@@ -32,14 +29,6 @@ class Admin::SponsorsController < ApplicationController
       render 'edit'
     end
   end
-
-  #def update
-  #  if @room.update(room_params)
-  #    redirect_to @room, notice: "Room successfully updated"
-  #  else
-  #    render :edit
-  #  end
-  #end
 
   def destroy
     @sponsor = Sponsor.find(params[:id])
