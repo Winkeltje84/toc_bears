@@ -5,13 +5,12 @@
 @import "admin";
 @import "footer";
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,500,900);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,400,500,700);
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-$btncolor: #FF9062;
-$btnshadow: #EC5357;
+$btnshadow: #EB5357;
 $panelcolor: #5EB4AF;
 $light-peach: #faf5ef;
 $deep-peach: #FF9062;
@@ -22,17 +21,28 @@ html{
 }
 
 body {
+  color: #4A4A4A;
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
+
+  background-color: #FAF5EF;
   height: 100%;
   background-color:$light-peach;
+}
+
+.row{
+  padding-bottom: 40px;
+}
+
+.row-secondary{
+  background-color: rgba(216, 216, 216, 0.6);
 }
 
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
   color: #fff;
-  background-color: $btncolor;
+  background-color: $deep-peach;
   box-shadow: 0px 3px $btnshadow;
 
   margin-left: 15px;
@@ -79,18 +89,89 @@ body {
   width: 100%;
 }
 
+// Public pages
+h2{
+  color: $btnshadow;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.subtitle{
+  font-size: 20px;
+}
+
+.form-newsletter{
+  background-color: inherit;
+  min-width: 420px;
+  padding: 8px 0;
+  margin: 20px 0 30px;
+
+  border: 0px;
+  border-bottom: 2px solid darkgrey;
+}
+
+.carousel-caption{
+    position:static;
+}
+
+.reviews{
+  color: #fff;
+  font-weight: 100;
+  background-color: $panelcolor;
+
+  width: 600px;
+  min-height: 150px;
+  margin: 20px auto;
+  padding-bottom: 10px;
+
+  border-radius: 5px;
+}
+
+.review-text{
+  padding: 25px;
+  font-size: 18px;
+}
+
+.reviews hr{
+  width: 100px;
+  margin: 10px auto;
+  border: 0px;
+  border-bottom: 7px solid $deep-peach;
+}
+
+.carousel-indicators{
+  bottom: -50px;
+}
+
+.carousel-indicators li{
+  background-color: grey;
+  border: 0px;
+  width: 12px;
+  height: 12px;
+}
+
+.carousel-indicators li.active{
+  background-color: $deep-peach;
+}
+
 // Images
 .img-small{
-  height: 140px;
   width: 140px;
+}
+
+.img-medium{
+  width: 300px;
+}
+.img-getready{
+  width: 260px;
+  max-height: 200px;
+  margin: 30px 0;
+  mix-blend-mode: multiply;
+
 }
 
 .img-sponsor-logo{
   width: 50px;
-}
-
-.img-carousel{
-  width: 300px;
 }
 
 // Events
