@@ -1,5 +1,5 @@
 <h2>Events</h2>
-<%= link_to "New Event", new_event_path, class: "btn btn-sm btn-default" %>
+<%= link_to "New Event", new_admin_event_path, class: "btn btn-sm btn-default" %>
 <hr>
 <h3>Public Events</h3>
 <%= render partial: "events_table", locals: { events: @public_events } %>

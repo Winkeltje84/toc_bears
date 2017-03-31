@@ -1,0 +1,12 @@
+<div class="container">
+  <h2><%= @event.title %></h2>
+  <strong>Location: </strong><%= @event.location %></br>
+  <strong>Spaces Available: </strong><%= @event.spaces_available %></br>
+  <strong>Date: </strong><%= @event.date %><br>
+  <strong>Nvite ID: </strong><%= @event.nvite_id %><br>
+  <%= image_tag @event.image %>
+  <hr>
+  <%= link_to "All Events", admin_events_path, class: "btn btn-sm btn-default" %>
+  <%= link_to "Edit Event", edit_admin_event_path, class: "btn btn-sm btn-default" %>
+  <%= link_to "Delete Event", admin_event_path, method: :delete, class: "btn btn-sm btn-danger" %>
+</div>
