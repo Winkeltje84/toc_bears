@@ -3,6 +3,6 @@ class PagesController < ApplicationController
   def attend;end
   def incompany;end
   def sponsor
-@sponsor_request = Sponsorrequest.new
+    @sponsor_request = SponsorRequest.new
   end
 end

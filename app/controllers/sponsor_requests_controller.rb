@@ -12,17 +12,20 @@ class SponsorRequestsController < ApplicationController
   end
 
   def create
-    @sponsor_request = SponsorRequest.new
-    @sponsor_request.create(sponsor_request_params)
-    #@sponsor_request.save
-      redirect_to sponsor_request_path
+    @sponsor_request = SponsorRequest.create(sponsor_request_params)
+    #@sponsor_request.create(sponsor_request_params)
+    if @sponsor_request.save(sponsor_request_params)
+      redirect_to sponsor_path, notice: "Thank you for your request."
+    else
+      redirect_to sponsor_path
     end
+  end
 
   def update
     @sponsor_request = SponsorRequest.find(params[:id])
 
     if @sponsor_request.update_attributes(sponsor_request)
-       redirect_to sponsor_request_path
+       redirect_to sponsor_path
     end
   end
 
@@ -34,7 +37,7 @@ class SponsorRequestsController < ApplicationController
 
   private
   def sponsor_request_params
-    params.require(:sponsor_request).permit(:first_name, :last_name, :company_name, :date, :email, :space_available, :comments)
+    params.require(:sponsor_request).permit(:first_name, :last_name, :company_name, :date, :email, :places_available, :comments)
   end
 
   def set_sponsor_request
