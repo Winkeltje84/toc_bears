@@ -1,21 +1,24 @@
 //= require_tree .
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "bootstrap-datetimepicker";
 @import "footer";
 
-// Add fonts
-@import url(https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&subset=latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,500,900);
+
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+$btncolor: #FF9062;
+$btnshadow: #EC5357;
+$panelcolor: #5EB4AF;
 
 html{
   height: 100%;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   height: 100%;
 }
@@ -23,31 +26,41 @@ body {
 // Homepage
 .cover{
   color: #fff;
-  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
 
-  background-color: #333;
   height: 100vh;
-
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
 .cover h3{
-  margin-top: 0px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.cover h1{
   margin-bottom: 40px;
+  text-transform: uppercase;
+  font-size: 50px;
+}
+
+.cover-inner{
+  background-color: $panelcolor;
+  min-width: 600px;
+  padding: 30px;
+  border-radius: 5px;
 }
 
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
-  color: #333;
-  font-weight: bold;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding: 10px 35px;
+  color: #fff;
+  background-color: $btncolor;
+  box-shadow: 0px 3px $btnshadow;
+
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 8px 20px;
 }
 
 // Images
