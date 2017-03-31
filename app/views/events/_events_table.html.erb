@@ -6,19 +6,23 @@
       <th>Location</th>
       <th>Spaces Available</th>
       <th>Date</th>
-      <th></th>
+      <th>Actions</th>
     </tr>
   </thead>
   <tbody>
     <% if events.count > 0 %>
       <% events.each do |event| %>
-        <tr class="clickable-row" data-href='<%= event_url(event.id) %>'>
+        <tr>
           <td><%= event.id %></td>
-          <td><%= link_to event.title, event %></td>
+          <td><%= event.title %></td>
           <td><%= event.location %></td>
           <td><%= event.spaces_available %></td>
-          <td><%= event.date %></td>
-          <td>buttons</td>
+          <td><%= event.date.strftime("%d-%m-%Y") %></td>
+          <td>
+            <%= link_to event_path(event.id), class: "button" do %><i class="fa fa-eye" aria-hidden="true"></i><% end %>
+            <%= link_to edit_event_path(event.id), class: "button orange" do %><i class="fa fa-pencil" aria-hidden="true"></i><% end %>
+            <%= link_to event_path(event.id), data: {confirm: "Are you sure?"}, class: "button red" do %><i class="fa fa-trash" aria-hidden="true"></i><% end %>
+          </td>
         </tr>
       <% end %>
     <% else %>
