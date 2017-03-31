@@ -5,16 +5,26 @@
   <div class="col-md-4 event">
     <!-- workshop -->
     <!-- title of event -->
+    <div class="btn btn-secondary event-workshop-type">
+      <h4><%= event.title %></h4>
+    </div>
+    <div class="event-location">
+      <span>Taste of Code<br/>at <%= event.location %></span>
+    </div>
+    <div class="event-datetime">
+      <span><%= event.date.strftime("%B %d") %></span>
+    </div>
+    <div class="event-time">
+      <span>10am – 4pm</span>
+    </div>
     <!-- date -->
     <!-- time -->
     <!-- rsvp -->
-    <div class="row">
-      <div class="col-md-4 col-md-offset-2">
-        <button>RSVP</button>
-      </div>
+    <div class="rsvp">
+      <button class="btn btn-secondary rsvp-button">RSVP</button>
     </div>
+
   </div>
   <% end %>
-
 
 </section>

@@ -13,6 +13,9 @@
 $btncolor: #FF9062;
 $btnshadow: #EC5357;
 $panelcolor: #5EB4AF;
+$light-peach: #faf5ef;
+$deep-peach: #FF9062;
+$workshop-background: rgba(35,39,42,.9);
 
 html{
   height: 100%;
@@ -22,6 +25,7 @@ body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   height: 100%;
+  background-color:$light-peach;
 }
 
 .btn-secondary,
@@ -87,4 +91,33 @@ body {
 
 .img-carousel{
   width: 300px;
+}
+
+// Events
+.event{
+  color:white;
+  background-color:$deep-peach;
+  border-radius: 5px;
+  margin-left:20px;
+  margin-right:20px;
+}
+.event-location{
+  font-size:24px;
+}
+.event-date, .event-time{
+  font-size:18px;
+}
+
+.event-workshop-type{
+  background-color:$workshop-background;
+  margin-top: -10px;
+  margin-bottom:30px;
+}
+.rsvp{
+  padding:20px;
+}
+.rsvp-button{
+  width:30%;
+  background-color: $panelcolor;
+  box-shadow: 0px 3px $btnshadow;
 }
