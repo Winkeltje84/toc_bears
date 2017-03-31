@@ -32,7 +32,7 @@ body {
 }
 
 .row{
-  padding-bottom: 20px;
+  padding: 40px 0;
 }
 
 .row-secondary{
@@ -90,7 +90,7 @@ body {
   width: 100%;
 }
 
-// Attend
+// Public pages
 h2{
   color: $btnshadow;
   font-size: 30px;
@@ -99,11 +99,16 @@ h2{
 
 .subtitle{
   font-size: 20px;
-  font-weight: 400;
 }
 
-h3{
+.form-newsletter{
+  background-color: inherit;
+  min-width: 420px;
+  padding: 8px 0;
+  margin: 20px 0 30px;
 
+  border: 0px;
+  border-bottom: 2px solid darkgrey;
 }
 
 // Images
@@ -113,7 +118,13 @@ h3{
 
 .img-medium{
   width: 300px;
-  margin: 20px 0;
+}
+.img-getready{
+  width: 260px;
+  max-height: 200px;
+  margin: 30px 0;
+  mix-blend-mode: multiply;
+
 }
 
 .img-sponsor-logo{
