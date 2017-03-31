@@ -5,13 +5,13 @@
 @import "admin";
 @import "footer";
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,500,900);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,400,500,900);
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
 $btncolor: #FF9062;
-$btnshadow: #EC5357;
+$btnshadow: #EB5357;
 $panelcolor: #5EB4AF;
 $light-peach: #faf5ef;
 $deep-peach: #FF9062;
@@ -22,10 +22,17 @@ html{
 }
 
 body {
+  color: #4A4A4A;
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
+
+  background-color: #FAF5EF;
   height: 100%;
   background-color:$light-peach;
+}
+
+.row-secondary{
+  background-color: rgba(216, 216, 216, 0.6);
 }
 
 .btn-secondary,
@@ -77,6 +84,22 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+// Attend
+h2{
+  color: $btnshadow;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.subtitle{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+h3{
+
 }
 
 // Images
