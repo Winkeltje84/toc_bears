@@ -1,7 +1,14 @@
 class NewsletterController < ApplicationController
 
   def subscribe
-    gibbon = Gibbon::Request.new(api_key: "65d0faf4bd22c091ddec5b75c2660b92-us9")
-    gibbon.lists("d08a5502a8").members.create(body: { email_address: "foo@bar.com", status: "subscribed" })
+    list_id = ENV['MAILCHIMP_LIST_ID']
+    gibbon = Gibbon::Request.new(api_key: ENV['MAILCHIMP_API_KEY'])
+    begin
+      if gibbon.lists(list_id).members.create(body: { email_address: params[:email][:address], status: "subscribed" })
+        redirect_to attend_path, notice: "Succesfully subscribed"
+      end
+    rescue Gibbon::MailChimpError => e
+      redirect_to attend_path, alert: "Something went wrong... #{e.title}"
+    end
   end
 end

@@ -98,7 +98,7 @@ GEM
     ffi (1.9.18)
     font-awesome-sass (4.7.0)
       sass (>= 3.2)
-    gibbon (2.2.5)
+    gibbon (3.0.1)
       faraday (>= 0.9.1)
       multi_json (>= 1.11.0)
     globalid (0.3.7)
@@ -261,7 +261,7 @@ DEPENDENCIES
   devise (~> 4.2)
   factory_girl_rails (= 4.7.0)
   font-awesome-sass
-  gibbon (~> 2.2, >= 2.2.3)
+  gibbon
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
