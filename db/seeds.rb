@@ -1,8 +1,9 @@
 User.delete_all
-IncompanyRequest.delete_all
 puts "Deleted all the users"
 Event.delete_all
 puts "Deleted all events"
+IncompanyRequest.delete_all
+puts "Deleted all the incompany requests"
 
 User.create!(email: "wouter@codaisseur.com", password: "testing", admin: true)
 User.create!(email: "valentina@codaisseur.com", password: "testing", admin: true)
@@ -32,3 +33,4 @@ incompanyrequest2 = IncompanyRequest.create! (
   spaces_available: 80,
   comments: "Going to host an incompany event for all our employees named Something",
   workshop_id: ""})
+puts "Created the incompany request"
