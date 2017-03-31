@@ -1,5 +1,5 @@
 <div>
-    <%= form_for @sponsor_request do |f| %>
+    <%= form_for [ :admin, @sponsor_request] do |f| %>
   <%= f.label :first_name %>
   <%= f.text_field :first_name %>
 
