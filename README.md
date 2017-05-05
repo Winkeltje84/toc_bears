@@ -2,7 +2,15 @@
 > Bears Group
 
 ## About
-During the Codaisseur Academy we were given the assignment to build a new Rails app for their [Taste of Code](http://tasteofcode.nl/) website. We got 4,5 days to build the app. There wasn't enough time to finish the entire app, so not all features are completely implemented and working. Codaisseur asked us to focus on specific parts of the app in the end of the project.
+This project is to replace the website for Codaisseur's [Taste of Code](http://tasteofcode.nl/) event. The new site will allow:
+
+- users to sign up for the next Taste of Code events
+- companies to request to sponsor a public Taste of Code event
+- companies to request an in-house Taste of Code event.
+
+The back-end is mostly feature-complete. On the front-end, the public Taste of Code page and landing page are both mostly feature-complete, but the company-related pages are still works-in-progress.
+
+The team that worked on this are [Bas Winkel](https://github.com/Winkeltje84), [Anika Schwing](https://github.com/anikaSchwing), [Lee Freeman](https://github.com/leefreemanxyz), [Wouter Leijdes](https://github.com/Woulei), [Vanessa Ho](https://github.com/V-Ho) and [Caroline Olijve](https://github.com/olijvecaroline).
 
 [![](https://github.com/Winkeltje84/toc_bears/blob/readme/app/assets/images/screenshots/toc1.jpeg?raw=true)](/assets/images/screenshots/toc1.jpeg?raw=true)
 [![](https://github.com/Winkeltje84/toc_bears/blob/readme/app/assets/images/screenshots/toc2.png?raw=true)](https://github.com/Winkeltje84/toc_bears/blob/readme/app/assets/images/screenshots/toc2.png?raw=true)
